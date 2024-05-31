@@ -21,20 +21,14 @@
 
     <Button
         android:id="@+id/buttonRestart"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/black"
+        style="@style/optionButton"
         android:text="Restart"
         app:layout_constraintStart_toStartOf="@+id/buttonStop"
         app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
 
     <Button
         android:id="@+id/buttonRules"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/black"
+        style="@style/optionButton"
         android:text="Rules"
         app:layout_constraintEnd_toEndOf="@+id/buttonStop"
         app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
