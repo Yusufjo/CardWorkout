@@ -32,7 +32,8 @@
     <Button
         android:id="@+id/buttonRestart"
         style="@style/optionButton"
-        android:text="@string/restart"
+        android:text="Start"
+        android:backgroundTint="@color/green"
         app:layout_constraintStart_toStartOf="@+id/buttonStop"
         app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
 
@@ -40,6 +41,7 @@
         android:id="@+id/buttonRules"
         style="@style/optionButton"
         android:text="@string/rules_button"
+        android:backgroundTint="@color/blue"
         app:layout_constraintEnd_toEndOf="@+id/buttonStop"
         app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
 

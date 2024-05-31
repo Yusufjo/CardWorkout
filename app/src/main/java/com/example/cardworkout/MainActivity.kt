@@ -13,6 +13,16 @@ class MainActivity : AppCompatActivity() {
     private val handler = Handler(Looper.getMainLooper())
     private  var isRunning = false
 
+    private val cardList = listOf(R.drawable.card1,
+        R.drawable.card2,
+        R.drawable.card4,
+        R.drawable.card5,
+        R.drawable.card6,
+        R.drawable.card7,
+        R.drawable.card8,
+        R.drawable.card9,
+        R.drawable.card10)
+
     private val changeCardRunnable = object : Runnable {
         override fun run() {
             if (isRunning) {
@@ -34,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttonStop.setOnClickListener {
+            binding.buttonRestart.text = "Restart"
            stopChangingCard()
         }
 
@@ -50,15 +61,14 @@ class MainActivity : AppCompatActivity() {
     private fun startChangingCard(){
         if (!isRunning){
             isRunning = true
+            changeCard()
             handler.post(changeCardRunnable)
         }
     }
 
     private fun changeCard() {
-        val randomCard  = Random.nextInt(1,11)
-        val cardName = "card${randomCard}"
-        val resId = resources.getIdentifier(cardName,"drawable",packageName)
-
+        val randomCard  = Random.nextInt(cardList.size)
+        val resId = cardList[randomCard]
         binding.imageView5.setImageResource(resId)
     }
 }
