@@ -6,4 +6,7 @@
     <string name="sit">= Sit-up</string>
     <string name="burpees">= Burpees</string>
     <string name="jump">= Jumping Jacks</string>
+    <string name="stop">Stop!</string>
+    <string name="restart">Restart</string>
+    <string name="rules_button">Rules</string>
 </resources>
