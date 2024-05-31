@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CardWorkout</string>
+    <string name="rules">Rules!</string>
+    <string name="rule">The value of each card represents the number of exercise you do</string>
+    <string name="push">= Push-up</string>
+    <string name="sit">= Sit-up</string>
+    <string name="burpees">= Burpees</string>
+    <string name="jump">= Jumping Jacks</string>
+</resources>
