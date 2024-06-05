@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AlertDialog
 import com.example.cardworkout.databinding.ActivityMainBinding
+import com.example.cardworkout.databinding.DialogBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -49,9 +51,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttonRules.setOnClickListener {
-            val intent = Intent(this,RulesMainActivity::class.java)
-            startActivity(intent)
+            setRulesDialog()
         }
+
     }
 
     private fun stopChangingCard() {
@@ -70,5 +72,19 @@ class MainActivity : AppCompatActivity() {
         val randomCard  = Random.nextInt(cardList.size)
         val resId = cardList[randomCard]
         binding.imageView5.setImageResource(resId)
+    }
+
+    private fun setRulesDialog(){
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        val diaologBinding = DialogBinding.inflate(layoutInflater)
+        alertDialogBuilder.setView(diaologBinding.root)
+
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+        alertDialog.window?.setBackgroundDrawableResource(R.drawable.bg_raunded)
+
+        diaologBinding.buttonClose.setOnClickListener {
+            alertDialog.dismiss()
+        }
     }
 }
