@@ -7,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AlertDialog
 import com.example.cardworkout.databinding.ActivityMainBinding
-import com.example.cardworkout.databinding.DialogBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -75,16 +74,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setRulesDialog(){
-        val alertDialogBuilder = AlertDialog.Builder(this)
-        val diaologBinding = DialogBinding.inflate(layoutInflater)
-        alertDialogBuilder.setView(diaologBinding.root)
 
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.show()
-        alertDialog.window?.setBackgroundDrawableResource(R.drawable.bg_raunded)
-
-        diaologBinding.buttonClose.setOnClickListener {
-            alertDialog.dismiss()
-        }
     }
 }
